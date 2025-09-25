@@ -3,10 +3,46 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Lab_Rab_1_2_Husainova_R.Z._BPI_23_02"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="200" Width="350" MinHeight="200" MinWidth="350">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                   Text="Функции и производные" 
+                   FontSize="18" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Text="Введите x:"/>
+            <TextBox x:Name="WriteX" Grid.Row="1" Grid.Column="1"
+                 PreviewTextInput="WriteX_PreviewTextInput" 
+                 PreviewKeyDown="WriteX_PreviewKeyDown"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" 
+                   Text="Выберите функцию:"/>
+            <ComboBox x:Name="ComboFunction" Grid.Column="1" Grid.Row="2"
+            SelectedIndex="0">
+                <ComboBoxItem Content="arcsin(x)" />
+                <ComboBoxItem Content="arccos(x)" />
+            </ComboBox>
+            <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
+                    Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Вычислить" Width="120"/>
+                <Button Content="Производная" Width="120"/>
+            </StackPanel>
+            <TextBlock Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+                   Text="Результат:" Margin="5"
+                   FontWeight="Bold" FontSize="16" HorizontalAlignment="Center"/>
+            <TextBox x:Name="TxtResult" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"  Margin="5" Grid.RowSpan="2"/>
+        </Grid>
+    </Window>
+
         
-    </Grid>
-</Window>
+   

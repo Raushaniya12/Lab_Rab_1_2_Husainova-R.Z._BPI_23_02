@@ -4,7 +4,7 @@ namespace Lab_Rab_1_2_Husainova_R.Z._BPI_23_02
 {
     public class Arccos: Function
     {
-        public override string Name => "arccos";
+        public Arccos() : base("arccos") { }
 
         public override bool IsValidForFunction(double x) => x >= -1 && x <= 1;
         public override bool IsValidForDerivative(double x) => Math.Abs(x) < 1;

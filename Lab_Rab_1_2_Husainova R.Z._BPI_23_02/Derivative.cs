@@ -4,7 +4,7 @@ namespace Lab_Rab_1_2_Husainova_R.Z._BPI_23_02
 {
     public static class Derivative
     {
-        public static double Calculate(Function func, double x)
+        public static double Calculate(IFunction func, double x)
         {
             if (!func.IsValidForDerivative(x))
             {

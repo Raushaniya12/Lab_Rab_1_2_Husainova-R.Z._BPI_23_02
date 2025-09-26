@@ -9,14 +9,19 @@ namespace Lab_Rab_1_2_Husainova_R.Z._BPI_23_02
 {
     public abstract class Function: IFunction //Базовый класс 
     {
-        private readonly string _name;
+        protected readonly string _name;
         protected Function(string name)
         {
             _name = name;
         }
+        public string Name => _name;
         public virtual string GetInfo()
         {
             return $"Обратная тригонометрическая функция: {Name}";
+        }
+        public virtual string GetInfo(string context)
+        {
+            return $"{GetInfo()} [контекст: {context}]";
         }
 
         public abstract double Calculate(double x);

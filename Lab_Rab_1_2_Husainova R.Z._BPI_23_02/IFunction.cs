@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_Rab_1_2_Husainova_R.Z._BPI_23_02
 {
-    internal interface IFunction
+    public interface IFunction
     {
         string Name { get; }
         double Calculate(double x);
